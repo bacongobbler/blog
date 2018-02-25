@@ -1,14 +1,14 @@
 <header>
 	<nav>
 		<ul class="main">
-			<li><a href="https://blog.bacongobbler.com">{{ .Site.Title }}</a></li>
+			<li><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></li>
 		</ul>
 		<ul class="social">
 			<li>
-				<a class="fa fa-github" href="https://github.com/bacongobbler" target="_blank"></a>
+				<a class="fa fa-github" href="https://github.com/{{ .Site.Author.github }}" target="_blank"></a>
 			</li>
 			<li>
-				<a class="fa fa-twitter" href="https://twitter.com/bacongobbler" target="_blank"></a>
+				<a class="fa fa-twitter" href="https://twitter.com/{{ .Site.Author.twitter }}" target="_blank"></a>
 			</li>
 		</ul>
 	</nav>

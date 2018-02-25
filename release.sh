@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 set -eo pipefail
 
 # Print a usage message and exit.
