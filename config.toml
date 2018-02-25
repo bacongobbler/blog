@@ -1,0 +1,6 @@
+baseUrl = "https://blog.bacongobbler.com/"
+CanonifyUrls = true
+languageCode = "en-us"
+title = "Matt Fisher's Blog"
+pygmentsCodeFences = true
+pygmentsStyle = "native"
