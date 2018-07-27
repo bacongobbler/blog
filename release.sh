@@ -29,11 +29,6 @@ fi
 [ "$AZURE_STORAGE_ACCOUNT" ] || usage
 [ "$AZURE_STORAGE_KEY" ] || usage
 [ "$AZURE_CDN_NAME" ] || usage
-[ "$AZURE_CDN_ENDPOINT_NAME" ] || usage
 
 # upload the files to azure
 az storage blob upload-batch --source public/ --destination "${AZURE_CONTAINER}"
-
-# purge the CDN
-echo "Purging CDN. Please wait..."
-az cdn endpoint purge -g "${AZURE_RG_NAME}" --profile-name "${AZURE_CDN_NAME}" -n "${AZURE_CDN_ENDPOINT_NAME}" --content-paths '/*'
