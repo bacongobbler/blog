@@ -39,9 +39,10 @@ usage() {
 
 echo "Installing Azure components"
 # NOTE(bacongobbler): azure-cli needs a newer version of libffi/libssl. See https://github.com/Azure/azure-cli/issues/3720#issuecomment-350335381
-apt-get update && apt-get install -yq python-setuptools python-pip libffi-dev libssl-dev
-easy_install pyOpenSSL
+apt-get update && apt-get install -yq python-pip libffi-dev libssl-dev
+pip install pyopenssl
 pip install --disable-pip-version-check --no-cache-dir azure-cli~=2.0
+echo
 
 echo "Pushing assets to Azure Blob Storage"
 pushd public/
