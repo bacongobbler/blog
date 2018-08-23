@@ -47,12 +47,13 @@ echo
 echo "Pushing assets to Azure Blob Storage"
 pushd public/
 	for i in $(ls -p); do
+		echo "uploading $i..."
 		# if this is a directory, upload to a blob container with the same name as the subdirectory
 		if [[ $i = *"/" ]]; then
 			az storage blob upload-batch --source "$i" --destination "$i"
 		else
 			# otherwise upload it to the root container
-			az storage blob upload-batch --source $i --destination '$root'
+			az storage blob upload -f "$i" -c '$root'
 		fi
 	done
 popd
