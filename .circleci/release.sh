@@ -51,7 +51,7 @@ pushd public/
 			az storage blob upload-batch --source "$i" --destination "$i"
 		else
 			# otherwise upload it to the root container
-			az storage blob upload-batch --source $i --destination "_root"
+			az storage blob upload-batch --source $i --destination '$root'
 		fi
 	done
 popd
