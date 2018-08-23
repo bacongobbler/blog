@@ -13,8 +13,8 @@ jobs:
           name: build
           command: .circleci/build.sh
       - deploy:
-          name: deploy
-          command: .circleci/deploy.sh
+          name: release
+          command: .circleci/release.sh
 workflows:
   version: 2
   build:
