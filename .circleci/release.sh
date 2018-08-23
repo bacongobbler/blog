@@ -53,7 +53,7 @@ pushd public/
 			az storage blob upload-batch --source "$i" --destination "$i"
 		else
 			# otherwise upload it to the root container
-			az storage blob upload -f "$i" -c '$root'
+			az storage blob upload -f "$i" -n "$AZURE_STORAGE_ACCOUNT" -c '$root'
 		fi
 	done
 popd
