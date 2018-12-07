@@ -3,18 +3,18 @@ layout: post
 title:  I heard you like Tetris...
 date:   2013-08-29
 author: Matthew Fisher
-tags: games nodejs stackato devops
+tags: [games, nodejs, stackato, devops]
 comments: true
 ---
 
 So why not play tetris inside Stackato, or any other server that allows you to
-tunnel via SSH? Now you can, thanks to the help of 
-[Mathias Buus](https://github.com/mafintosh) 
+tunnel via SSH? Now you can, thanks to the help of
+[Mathias Buus](https://github.com/mafintosh)
 who created a program that will let you play tetris in full colour in your
 terminal window.
 
 Most of my time at ActiveState HQ is spent on getting open source
-applications like [tetris](https://github.com/Stackato-Apps/tetris) or 
+applications like [tetris](https://github.com/Stackato-Apps/tetris) or
 [docker's internal registry](https://github.com/Stackato-Apps/docker-registry)
 'stackatofied'. We choose applications that are new and exciting or that
 demonstrate deploying an application in some way. Deploying a Node.js

@@ -3,7 +3,7 @@ layout: post
 title:  How to create your own Custom Service in Stackato
 date:   2013-07-15
 author: Matthew Fisher
-tags: stackato service
+tags: [stackato, service]
 comments: true
 ---
 
@@ -22,7 +22,7 @@ Stackato services are implemented through Ruby applications that act as adapters
 
 The Ruby application for each service acts as a gateway between the service and the interfaces, as well as helping provision the services. Provisioning is a particularly broad term here in the services department. Let's break down some examples of provisioning:
 
- * creating a new database, along with a user and password to access that database 
+ * creating a new database, along with a user and password to access that database
  * spawning a new process, allocating a new port number
  * creating a new filesystem directory and mounting it in a container
 
@@ -71,7 +71,7 @@ The provisioner in most services are located at <code>lib/name_service/name_node
 
         ... # exception handling
         end
-        
+
         gen_credential(instance)
     end
 
@@ -105,7 +105,7 @@ For Elasticsearch, the provisioning code isn't that much different:
             instance.pid = start_instance(instance, db_file)
             save_instance(instance)
             @logger.debug("Started process #{instance.pid}")
-        
+
         ... # cleanup code
         end
 
@@ -124,7 +124,7 @@ Edit the 'cloud_controller_uri' to reflect - you guessed it - the Cloud Controll
     vim config/elasticsearch_gateway.yml
 
 The following installs elasticsearch for the stackato user under */opt/elasticsearch* along with any dependencies elasticsearch relies on. If you want to install a newer/older version of Elasticsearch, change the VERSION variable to suit your needs.
-    
+
     sudo ./scripts/install-elasticsearch.sh
 
 To install the elasticsearch service to the current node:
@@ -135,7 +135,7 @@ Bootstrapping runs all of the commands shown in the echo service example, includ
 
     $ stackato services
     ============== System Services ==============
-    
+
     +---------------+---------+------------------------------------------------+
     | Service       | Version | Description                                    |
     +---------------+---------+------------------------------------------------+
@@ -144,11 +144,11 @@ Bootstrapping runs all of the commands shown in the echo service example, includ
     | harbor        | 1.0     | External port mapping service                  |
     | memcached     | 1.4     | Memcached in-memory object cache service       |
     ...
-    
+
     $ stackato create-service elasticsearch mysearch1
     Creating Service: OK
     $ stackato service mysearch1
-    
+
     mysearch1
     +-------------+--------------------------------------+
     | What        | Value                                |

@@ -3,13 +3,13 @@ layout: post
 title:  Blog Deployment Workfow using Nginx, Jekyll, and git post-receive Hooks
 date:   2013-07-09
 author: Matthew Fisher
-tags: jekyll blog deployment
+tags: [jekyll, blog, deployment]
 comments: true
 ---
 
 This blog post shows how I set up a remote repository on my deployment server for making
 blog deployments as easy as <code>git push deploy master</code>. This website lives within a git repository on my private git site, and it was
-made using [jekyll][jekyll]. 
+made using [jekyll][jekyll].
 
 # Prerequisites
 
@@ -51,7 +51,7 @@ Create the public HTML folder to store your website and give access rights to th
 '$_' grabs the last argument from the last command, which would be '/var/www/www.server.com'.
 Now, start defining your post-receive hook to deploy your app:
 
-    bacongobbler@bacongobbler:~/blog.git/hooks$ cat post-receive 
+    bacongobbler@bacongobbler:~/blog.git/hooks$ cat post-receive
     #!/bin/sh
     GIT_REPO=git@git.bacongobbler.com:bacongobbler/blog.git
     TMP_GIT_CLONE=/tmp/blog

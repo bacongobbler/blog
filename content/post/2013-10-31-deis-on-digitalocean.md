@@ -3,7 +3,7 @@ layout: post
 title:  Deis on DigitalOcean
 date:   2013-09-24
 author: Matthew Fisher
-tags: deis devops paas
+tags: [deis, devops, PaaS]
 comments: true
 ---
 
@@ -57,7 +57,7 @@ To start, you'll need git, RubyGems, and an account on a Chef server accessible 
 
 ### Clone the Deis Repository
 
-    git clone https://github.com/opdemand/deis.git 
+    git clone https://github.com/opdemand/deis.git
 
 ### Install Dependencies
 
@@ -169,7 +169,7 @@ Now that we have prepared our controller, let's deploy a multi-node cluster over
 
 The --domain command here is VERY IMPORTANT. This makes Deis resolve the formation's domain name to bacongobbler.com. Without this, we cannot host multiple applications on the same cluster.
 
-Let's create two layers. One will be a proxy layer, and the other will host the applications: 
+Let's create two layers. One will be a proxy layer, and the other will host the applications:
 
     $ deis layers:create dev proxy digitalocean-san-francisco-1 --proxy=y --runtime=n
     $ deis layers:create dev runtime digitalocean-san-francisco-1 --proxy=n --runtime=y

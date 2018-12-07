@@ -3,7 +3,7 @@ layout: post
 title:  Working with Multiple Dockerfiles
 date:   2013-07-26
 author: Matthew Fisher
-tags: docker linux cloud
+tags: [docker, linux, cloud]
 comments: true
 ---
 
@@ -27,7 +27,7 @@ let's see this in action:
     bacongobbler@workbox:~$ cd $_
     bacongobbler@workbox:~/project/dockerfiles$ touch elasticsearch.dock mongodb.dock memcached.dock
     bacongobbler@workbox:~/project/dockerfiles$ # edit files to make legit dockerfiles
-    bacongobbler@workbox:~/project/dockerfiles$ cat memcached.dock 
+    bacongobbler@workbox:~/project/dockerfiles$ cat memcached.dock
     from        ubuntu
     maintainer  Matthew Fisher <me@bacongobbler.com>
 

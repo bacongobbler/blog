@@ -4,6 +4,7 @@ languageCode = "en-us"
 title = "Matt Fisher's Blog"
 pygmentsCodeFences = true
 pygmentsStyle = "native"
+theme = "arabica"
 
 [Author]
     Name = "Matthew Fisher"
@@ -11,3 +12,7 @@ pygmentsStyle = "native"
     Email = "matt.fisher@fishworks.io"
     Github = "bacongobbler"
     Twitter = "bacongobbler"
+
+[params]
+    dateFormatToUse = "2006-01-02"
+    replaceGoogleFonts = "fonts.loli.net"
