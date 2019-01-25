@@ -3,7 +3,7 @@ layout: post
 title:  Deis on DigitalOcean
 date:   2013-09-24
 author: Matthew Fisher
-tags: [deis, devops, PaaS]
+tags: [deis, devops, paas]
 comments: true
 ---
 
