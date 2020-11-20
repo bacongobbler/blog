@@ -9,7 +9,7 @@ tags = ["azure"]
 
 I'm an absolute sucker for free (or at least incredibly cheap) stuff. If you're reading this, you probably are too.
 
-As a semi-recent hire at Microsoft, one of the employee perks is an Azure subscription with a monthly quota worth $150USD. For Canadians, that translates to $190CAD per month. While that is plenty enough to host a few websites on several fairly beefy VMs, why not optimize costs and host for as little as $0.02 per month? With that kind of cost savings, we could host THOUSANDS of sites and hardly put a dent in our wallet.
+As a semi-recent hire at Microsoft, one of the employee perks is an Azure subscription with a monthly quota worth $150USD. For Canadians, that translates to $190CAD per month. While that is plenty enough to host a few websites on several fairly beefy VMs, why not optimize costs and host for as little as $0.20 per month? With that kind of cost savings, we could host THOUSANDS of sites and hardly put a dent in our wallet.
 
 Of course, if you're feeling like a baller and just want to make it rain, [spin up that WordPress on Azure in minutes](https://azure.microsoft.com/en-gb/blog/how-to-host-a-scalable-and-optimized-wordpress-for-azure-in-minutes/) and blog like it's 1999.
 
@@ -213,4 +213,4 @@ The content is now available in the `public/` folder. Upload it manually through
 $ az storage blob upload-batch --source public/ --destination mycontainer
 ```
 
-And there we go! One static site, hosted on Azure Blob Storage for $0.02. Have fun with all your cloud hosting savings!
+And there we go! One static site, hosted on Azure Blob Storage for $0.20. Have fun with all your cloud hosting savings!
