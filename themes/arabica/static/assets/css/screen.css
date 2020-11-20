@@ -133,7 +133,8 @@ hr {
 }
 
 .post a:visited {
-    color: #9EABB3;
+    /* color: #16354E; */
+    color: #86440A;
     text-decoration: none;
 }
 
