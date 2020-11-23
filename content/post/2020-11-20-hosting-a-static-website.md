@@ -1,6 +1,6 @@
 +++
 date = "2020-11-20"
-title = "Hosting a Static Website On Azure"
+title = "Hosting a Static Website for $0.01"
 description = "Tutorial on hosting your own static website on Azure"
 tags = ["azure"]
 +++
@@ -15,13 +15,12 @@ views per month.
 In my previous tutorial, it cost about $0.20 per month to handle storage and
 bandwidth costs.
 
-But for the last 12 months, it cost me $0.01 per month to keep this site running
-for the past 12 months. $0.05 for storage, and $0.07 for bandwidth. A grand
-total of $0.12 per year to keep this site running (ignoring domain registration
-costs).
+But for the last 12 months, it cost me $0.01 per month to keep this site
+running. $0.05 for storage, and $0.07 for bandwidth. A grand total of $0.12 per
+year to keep this site running (ignoring domain registration costs).
 
 ![azure invoice for the past 12
-months](/img/2020-11-20-hosting-a-static-website-on-azure/billing.jpg)
+months](/img/2020-11-20-hosting-a-static-website/billing.jpg)
 
 In addition, any changes to the site are committed, pushed, and automatically
 updated using a custom [GitHub Action I wrote earlier this
@@ -64,7 +63,7 @@ Account. Follow through the prompts and give it a name. The name isn’t too
 important at this point.
 
 ![storage account creation
-details](/img/2020-11-20-hosting-a-static-website-on-azure/storage-account-creation.jpg)
+details](/img/2020-11-20-hosting-a-static-website/storage-account-creation.jpg)
 
 ## Link your Custom Domain
 
@@ -72,7 +71,7 @@ Once complete, navigate to the storage account page and click on "custom domain"
 on the left sidebar.
 
 ![custom
-domain](/img/2020-11-20-hosting-a-static-website-on-azure/storage-account-custom-domain.jpg)
+domain](/img/2020-11-20-hosting-a-static-website/storage-account-custom-domain.jpg)
 
 Once there, you'll be provided with two separate methods to set up your custom
 domain:
@@ -105,22 +104,23 @@ Once there, enable static websites and enter "index.html" and "404.html" for the
 index and error document paths, respectively. Hit "save" before proceeding.
 
 ![static
-website](/img/2020-11-20-hosting-a-static-website-on-azure/storage-account-static-website.jpg)
+website](/img/2020-11-20-hosting-a-static-website/storage-account-static-website.jpg)
 
 Now that's done, we have most of our main infrastructure in place. Now we get to
 the fun part: building the website!
 
 ## Create a new Github Repository
 
-We need somewhere to host our source code. GitHub is free and includes a few handy
-tools like [GitHub Actions](https://docs.github.com/actions), which we'll be
-using to build and upload our site to Azure in a later step.
+We need somewhere to host our source code. GitHub is free and includes a few
+handy tools like [GitHub Actions](https://docs.github.com/actions), which we'll
+be using to build and upload our site to Azure in a later step.
 
 When creating your repository, you can choose to mark it as public or private.
 Either method will work, but I would encourage you to choose the public option.
 I'm sure many others would like to learn how your site is set up!
 
-![github - create repository](/img/2020-11-20-hosting-a-static-website-on-azure/github-create-repo.jpg)
+![github - create
+repository](/img/2020-11-20-hosting-a-static-website/github-create-repo.jpg)
 
 ## Install Hugo
 
@@ -132,7 +132,9 @@ On macOS, install hugo with
 brew install hugo
 ```
 
-If you're feeling adventurous, I also [wrote my own package manager](https://gofi.sh/)... It's cross platform and can work on Windows, macOS, and Linux.
+If you're feeling adventurous, I also [wrote my own package
+manager](https://gofi.sh/)... It's cross platform and can work on Windows,
+macOS, and Linux.
 
 On macOS/Linux:
 
@@ -176,7 +178,8 @@ echo "<h1>404 - Not Found</h1>" > content/404.html
 We need to create one last file... The GitHub Action workflow file. This file
 will inform GitHub to upload our site to Azure on every push to the main branch.
 
-Start by creating this file. In the project root, create `.github/workflows/release.yaml`:
+Start by creating this file. In the project root, create
+`.github/workflows/release.yaml`:
 
 ```yaml
 name: Upload To Azure Blob Storage
@@ -208,13 +211,15 @@ Let's set that up now.
 First, enter "Settings" -> "Secrets". Create a new repository secret. Enter
 "AZURE_BLOB_STORAGE_CONNECTION_STRING" as the key.
 
-![github - create secret](/img/2020-11-20-hosting-a-static-website-on-azure/github-secret.jpg)
+![github - create
+secret](/img/2020-11-20-hosting-a-static-website/github-secret.jpg)
 
 Now we need the connection string. In another tab, navigate back to the storage
 account page in your Azure Portal and hit the "Access Keys" page on the sidebar.
 Copy one of the connection strings and paste it as the value.
 
-![storage account - access keys](/img/2020-11-20-hosting-a-static-website-on-azure/storage-account-access-keys.jpg)
+![storage account - access
+keys](/img/2020-11-20-hosting-a-static-website/storage-account-access-keys.jpg)
 
 ## Push to GitHub
 
@@ -234,8 +239,10 @@ git push origin main
 After a few seconds, you can check on the actions page to see the action in
 action!
 
-![github action](/img/2020-11-20-hosting-a-static-website-on-azure/github-action.jpg)
+![github
+action](/img/2020-11-20-hosting-a-static-website/github-action.jpg)
 
 After it's complete, you should now see your new site at your domain!
 
-And there we go! One static site, hosted on Azure for $0.01 per month. Have fun with all your cloud hosting savings!
+And there we go! One static site, hosted on Azure for $0.01 per month. Have fun
+with all your cloud hosting savings!
