@@ -2,12 +2,12 @@ name: Upload To Azure Blob Storage
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   upload:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v3
       - uses: chabad360/hugo-actions@master
       - uses: bacongobbler/azure-blob-storage-upload@main
         with:
