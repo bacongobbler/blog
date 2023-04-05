@@ -1,0 +1,17 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{{ if hugo.IsProduction }}
+		{{ with resources.Get "tailwind.css" | resources.PostCSS | resources.Minify }}
+		<link rel="stylesheet" href="{{ .RelPermalink }}">
+		{{ end }}
+	{{ else if .Site.IsServer }}
+		{{ $seed := "weqklrjfmnk213409ufasdfhnlk3j4bladsfsl" }}
+		{{ $random := delimit (shuffle (split (md5 $seed) "" )) "" }}
+		{{ with resources.Get "tailwind.css" | resources.PostCSS | resources.ExecuteAsTemplate (printf "tailwind.dev.%v.css" $random) $random }}
+		<link rel="stylesheet" href="{{ .RelPermalink }}">
+		{{ end }}
+	{{ end }}
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600">
+	<title>{{ .Site.Title }}</title>
+</head>
