@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+{{ partial "partials/head.html" . }}
+<body class="bg-white dark:bg-neutral-900 dark:text-white">
+	<div class="flex">
+		<!-- navbar -->
+		<nav class="mr-16">
+			<ul>
+				{{ range .Pages }}
+				<li>
+					<a href="{{ .Permalink }}">{{ .Title }}</a>
+				</li>
+				{{ end }}
+			</ul>
+		</nav>
+
+		<!-- main content -->
+		<main class="flex justify-center">
+			<article class="prose dark:prose-invert">
+				<h1>{{ .Title }}</h1>
+				{{ .Content }}
+			</article>
+		</main>
+	</div>
+	{{ partial "partials/footer.html" . }}
+	{{ partial "partials/scripts.html" . }}
+</body>
+</html>
