@@ -18,8 +18,24 @@ body {
     }
 }
 
+/* Center images in blog posts in the center, and make sure they don't overflow */
 .post img {
     display: block;
     max-width: 100%;
     margin: 0 auto;
+}
+
+/* Blog title styling - remove link styling */
+.blog-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog-title a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog-title a:visited {
+    color: inherit;
 }
