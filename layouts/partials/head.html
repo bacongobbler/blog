@@ -1,0 +1,17 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+
+    <!-- Page Meta -->
+    <title>
+      {{ block "title" . }}
+        {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+      {{ end }}
+	</title>
+
+	{{ $styles := resources.Get "css/main.css" | minify }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+</head>

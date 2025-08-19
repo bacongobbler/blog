@@ -1,0 +1,25 @@
+/* Main content centering and padding */
+body {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Responsive padding for smaller screens */
+@media (max-width: 768px) {
+    body {
+        max-width: 90%;
+    }
+}
+
+/* Extra padding for very small screens */
+@media (max-width: 480px) {
+    body {
+        max-width: 100%;
+    }
+}
+
+.post img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}

@@ -4,7 +4,6 @@ languageCode = "en-us"
 title = "Matt Fisher's Blog"
 pygmentsCodeFences = true
 pygmentsStyle = "native"
-theme = "arabica"
 
 [Author]
     Name = "Matthew Fisher"
@@ -15,4 +14,3 @@ theme = "arabica"
 
 [params]
     dateFormatToUse = "2006-01-02"
-    replaceGoogleFonts = "fonts.loli.net"
