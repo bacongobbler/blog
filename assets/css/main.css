@@ -26,16 +26,30 @@ body {
 }
 
 /* Blog title styling - remove link styling */
-.blog-title, .post-title a {
+.blog-title a {
     text-decoration: none;
     color: inherit;
 }
 
-.blog-title, .post-title a:hover {
+.blog-title a:hover {
     text-decoration: none;
     color: inherit;
 }
 
-.blog-title, .post-title a:visited {
+.blog-title a:visited {
+    color: inherit;
+}
+
+.post-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-title a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-title a:visited {
     color: inherit;
 }
